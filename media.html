@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uche's Media</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/googleburst_11289.ico">
+  </head>
+  <body>
+    
+    <div id="navbar"></div>
+
+    <section class="home-page-section">
+      <h1>My Media Page</h1>
+
+      
+      <iframe
+        src="https://www.youtube.com/embed/yU7jJ3NbPdA"
+        title="YouTube Video Embed"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </section>
+
+    
+    <div id="footer"></div>
+
+    <script>
+      
+      fetch("components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("navbar").innerHTML = data));
+
+      
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script>
+  </body>
+</html>

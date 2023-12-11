@@ -1,84 +1,202 @@
 
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    font: 16px/1.5 'Arial', sans-serif;
-    padding: 20px;
-  }
-  
-
-  header,
-  footer {
-    clear: both;
-    border: 1px solid #2dada6;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px 0;
-  }
-  
-  
-  h1 {
-    color: #00ccccaf;
-  }
-  
-  h2 {
-    color: #007a99;
-    font-variant: small-caps;
-  }
-  
-
-  footer p {
-    font-size: 14px;
-    color: rgb(0, 183, 255);
-  }
-  
-  
-  main {
-    max-width: 600px;
-    float: left;
-    width: 60%;
-    padding: 0 20px;
-  }
-  
-  aside {
-    float: right;
-    width: 40%;
-    padding: 0 20px;
-  }
-  
-  
-  .mainimg img {
-    border: 1px solid #ddd;
-  }
-  
-  
-  figcaption {
-    font-weight: bold;
-    font-variant: small-caps;
-  }
-  
-  
-  q {
-    font-family: cursive;
-    font-style: italic;
-    font-size: 1.2em;
-  }
-  
-  
-  ul li {
-    list-style: none;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
     line-height: 1.6;
-  }
-  
-  
-  ul > li > a {
+    background-image: url(../images/backgroundImg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background-image: linear-gradient(black, rgb(68, 68, 68));
+    color: white;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+    position: relative;
+}
+
+a {
     text-decoration: none;
-    color: #00cc4e;
-  }
-  
-  
-  aside a:hover {
-    color: #4400ff;
-  }
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+a:hover {
+    color: #a6a4a4;
+}
+
+ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+}
+
+li:hover > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.home-page-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    background-image: linear-gradient(rgb(68, 68, 68), black);
+}
+
+.grid {
+    width: 538px;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    justify-content: space-between;
+    justify-items: center;
+}
+
+.item {
+    border: 2px solid #555;
+    width: auto;
+    height: 150px;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+iframe {
+  height:415px;
+  width: 660px;
+}
+
+
+
+@media (max-width: 768px) {
+    
+    nav {
+        padding: 5px;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    iframe {
+  height: 210px;
+  width: 340px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background-image: url(../images/whitebg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+}
+
 

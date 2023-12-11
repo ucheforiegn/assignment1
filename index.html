@@ -1,62 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biography</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/Google_icon-icons.com_66793.ico">
+  </head>
+  <body>
+    
+    <div id="navbar"></div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/normalise.css">
-    <!--Name - Uche joseph  | student id - 8911148-->
+    
 
-</head>
+    <section class="home-page-section">
+      <h2>Biography of Robert Kiyosaki</h2>
+      <p>Robert Toru Kiyosaki is a Japanese-American businessman and author. Kiyosaki is the founder of Rich Global LLC and 
+        the Rich Dad Company, a private financial education company that provides personal finance and business education to people 
+        through books and videos. Wikipedia
+        Born: April 8, 1947 (age 76 years), Hilo, Hawaii, United States
+        Spouse: Kim Kiyosaki (m. 1986)
+        Education: United States Merchant Marine Academy (1965–1969), University of Hawaii at Hilo, Hilo High School
+        Parents: Ralph H. Kiyosaki, Marjorie O. Kiyosaki
+        Full name: Robert Toru Kiyosaki
+        Siblings: Emi Kiyosaki, Beth Kiyosaki, Jon Kiyosaki</p>
+      <img src="images/profileImg.jpeg" alt="Famous Person" />
+      <p>
+        <i>“Often, in the real world, it's not the smart who get ahead but the bold.”</i>
+      </p>
+    </section>
 
-<body>
-    <header class="structure">
-        <h1>Robert kiyosaki</h1>
-    </header>
+    <section class="home-page-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Robert kiyosaki</td>
+            <td>69</td>
+            <td>New York</td>
+            <td>United Kindom</td>
+          </tr>
+          <tr>
+            <td>Robert kiyosaki</td>
+            <td>69</td>
+            <td>United State</td>
+            <td>California</td>
+          </tr>
+          <tr>
+            <td>Robert kiyosaki</td>
+            <td>69</td>
+            <td>Los Angeles</td>
+            <td>Canada</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <main>
-        <section class="structural">
-            <h2>Biography</h2>
-            <p>Robert Toru Kiyosaki is a Japanese-American entrepreneur, businessman and author.
-                Kiyosaki is the founder of Rich Global LLC and the Rich Dad Company, a private financial
-                education company that provides personal finance and business education to people through books and
-                videos.
-        </section>
+    
+    <div id="footer"></div>
 
-        <section>
-            <h2>Images</h2>
-            <figure class="mainimg">
-                <img src="images/download.jpeg" alt="Absolute Image">
-                <figcaption>Robert kiyosaki</figcaption>
-            </figure>
-            <figure class="mainimg">
-                <img src="images/download (1).jpeg" alt="Relative Image">
-                <figcaption>Robert kiyosaki & Donald Trump</figcaption>
-            </figure>
-        </section>
+    <script>
+      
+      fetch("components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("navbar").innerHTML = data));
 
-        <section>
-            <h2>Quotes</h2>
-            <q cite="https://www.brainyquote.com/authors/robert-kiyosaki-quotes">The size of your success is measured by
-                the strength of your desire.</q>
-        </section>
-    </main>
-
-    <aside>
-        <h2>Additional Information</h2>
-        <ul>
-            <li><a href="https://cointelegraph.com/news/" target="_blank">Page 1</a></li>
-            <li><a href="https://finance.yahoo.com/news/" target="_blank">Page 2</a></li>
-        </ul>
-    </aside>
-
-
-</body>
-<footer>
-    <p>
-        <b>&copy; Uche joseph 2023</b>
-    </p>
-</footer> 
+      
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script>
+  </body>
 </html>

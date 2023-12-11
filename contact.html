@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Uche</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/googleearthburst_11299.ico">
+  </head>
+  <body>
+    
+    <div id="navbar"></div>
+
+    <section class="contact-form-section">
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required />
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color" value="#000000" required />
+
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" name="reason">
+          <option value="question">Question</option>
+          <option value="feedback">Feedback</option>
+          <option value="support">Support</option>
+        </select>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    
+    <div id="footer"></div>
+
+    <script>
+      
+      fetch("components/navbar.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("navbar").innerHTML = data));
+
+      
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script>
+  </body>
+</html>
